@@ -6,7 +6,7 @@ import lombok.Data;
 public class MemberVO {
 	private String memberId;    	// ID
 	private String memberPw;    	// PW
-	private String memberName;  	// 이름
+	private String memberNames;  	// 이름
 	private String memberBirth; 	// 생년월일
 	private String memberPhone; 	// 폰번호
 	private String memberPhotoOr; 	// 프로필 사진(원본)

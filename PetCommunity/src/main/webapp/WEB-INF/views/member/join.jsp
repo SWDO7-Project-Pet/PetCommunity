@@ -1,109 +1,108 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 	<head>
-	
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	    <meta name="description" content="">
-	    <meta name="author" content="">
-	
-	    <title>회원가입</title>
-	
-	    <!-- Custom fonts for this template-->
-	    <link href="../resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-	    <link
-	        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-	        rel="stylesheet">
-	
-	    <!-- Custom styles for this template-->
-	    <link href="../resources/css/sb-admin-2.min.css" rel="stylesheet">
-		<link href="../resources/css/sb-admin-2.css" rel="stylesheet">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+			<!-- 부트스트랩 css -->
+			<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+			<!-- 페이지 자체 css -->
+			<link href="/resources/css/join.css" rel="stylesheet">
+			<!-- jquery -->
+			<script type="text/javascript" src="/resources/js/jquery-3.6.0.min.js"></script>
+			<!-- 부트스트랩 js -->
+			<script type="text/javascript"
+				src="/resources/js/bootstrap.bundle.min.js"></script>
+		<title>회원가입</title>
 	</head>
-
 	<body class="bg-gradient-primary">
+		<div class="container-fluid ps-md-0">
+			<div class="row g-0">
+				<div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+				<div class="col-md-8 col-lg-6">
+					<div class="login d-flex align-items-center py-5">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-9 col-lg-8 mx-auto">
+									<h3 class="login-heading mb-4">Welcome our COMMUNITY!!</h3>
 	
-	    <div class="container">
-	        <div class="card o-hidden border-0 shadow-lg my-5">
-	            <div class="card-body p-0">
-	                <!-- Nested Row within Card Body -->
-	                <div class="row">
-	                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-	                    <div class="col-lg-7">
-	                        <div class="p-5">
-	                            <div class="text-center">
-	                                <h1 class="h4 text-gray-900 mb-4">회원가입</h1>
-	                            </div>
-	                            <form class="user">
-	                            
-	                                <div class="form-group">
-		                                <input type="text" class="form-control form-control-user" id="memberId"
-		                                    placeholder="아이디">
-	                                </div>
-	                                
-	                                <div class="form-group row">
-	                                    <div class="col-sm-6 mb-3 mb-sm-0">
-	                                        <input type="password" class="form-control form-control-user"
-	                                            id="memberPw" placeholder="비밀번호">
-	                                    </div>
-	                                    <div class="col-sm-6">
-	                                        <input type="password" class="form-control form-control-user"
-	                                            id="memberPw" placeholder="비밀번호 확인">
-	                                    </div>
-	                                </div>
-	                                
-	                                <div class="form-group">
-	                                    <input type="text" class="form-control form-control-user" id="memberName"
-	                                        placeholder="이름">
-	                                </div>
-	                                
-	                                <div class="form-group">
-	                                    <input type="text" class="form-control form-control-user" id="memberBirth"
-	                                        placeholder="생년월일 ex)19990515">
-	                                </div>
-	                                
-	                                <div class="form-group">
-	                                    <input type="text" class="form-control form-control-user" id="memberPhone"
-	                                        placeholder="휴대폰 번호">
-	                                </div>
-	                                
-	                                <a href="#" class="btn btn-primary btn-user btn-block">
-	                                    가입하기
-	                                </a>
-	                                
-	                                <hr>
-	                                
-	                                <a href="index.html" class="btn btn-google btn-user btn-block">
-	                                    <i class="fab fa-google fa-fw"></i> Register with Google
-	                                </a>
-	                            </form>
-	                            <hr>
-	                            <div class="text-center">
-	                                <a class="small" href="forgot-password.html">Forgot Password?</a>
-	                            </div>
-	                            <div class="text-center">
-	                                <a class="small" href="login.html">Already have an account? Login!</a>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	
-	    </div>
-	
-	    <!-- Bootstrap core JavaScript-->
-	    <script src="../resources/vendor/jquery/jquery.min.js"></script>
-	    <script src="../resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	
-	    <!-- Core plugin JavaScript-->
-	    <script src="../resources/vendor/jquery-easing/jquery.easing.min.js"></script>
-	
-	    <!-- Custom scripts for all pages-->
-	    <script src="../resources/js/sb-admin-2.min.js"></script>
-	
-	</body>
+									<!-- Sign In Form -->
+									<form method="POST" action="/member/join" class="needs-validation" novalidate>
+										<div class="form-floating mb-3">
+											<input type="text" class="form-control" id="floatingInput" name="memberId"
+												placeholder="ex) name@example.com" required> <label
+												for="floatingInput">ID</label>
+											<div class="invalid-feedback">
+												ID를 제대로 입력해주시지 않을래요?
+											</div>
+										</div>
+										<div class="form-floating mb-3">
+											<input type="password" class="form-control" placeholder="PASSWORD" name="memberPw"
+												id="floatingPassword" minlength="5" required> <label
+												for="floatingPassword">PASSWORD</label>
+											<div class="invalid-feedback">
+												비미르번호를 입력이를 하세요
+											</div>
+										</div>
+										<div class="form-floating mb-3">
+											<input type="text" class="form-control" name="memberNames"
+												id="floatingPassword" placeholder="ex) 홍길동" required> <label
+												for="floatingPassword">NAME</label>
+											<div class="invalid-feedback">
+												이름을 까먹으셨나요?
+											</div>
+										</div>
+										<div class="form-floating mb-3">
+											<input type="text" class="form-control" 
+											maxlength="10" name="memberBirth"
+											pattern="^(19|20)\d{2}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[0-1])$"
+											onkeyup="this.value=this.value.replace(/(\d{4})(\d{2})(\d)/,'$1-$2-$3')"
+												id="floatingPassword" placeholder="ex) 19900101" required><label
+												for="floatingPassword">BIRTH</label>
+											<div class="invalid-feedback">
+												생년월일을 몰라요?
+											</div>
+										</div>
+										<div class="form-floating mb-3">
+											<input type="text" class="form-control" name="memberPhone"
+												id="floatingPassword" placeholder="ex) 01012341234" required> <label
+												for="floatingPassword">PHONE NUMBER</label>
+											<div class="invalid-feedback">
+												설마 자기 폰번호 안외우는거 아니죠?
+											</div>
+										</div>
+										<div class="d-grid">
+											<button
+												class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2"
+												type="submit">JOIN!!</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		'use strict';
 
+		let forms = document.querySelectorAll('.needs-validation');
+
+		[].slice.call(forms).forEach( form => {
+		  form.addEventListener('submit', event => {
+		    if (!form.checkValidity()) {
+		      event.preventDefault();
+		      event.stopPropagation();
+		    }
+		    form.classList.add('was-validated');
+		  }, false)
+		});
+		</script>
+	</body>
 </html>
